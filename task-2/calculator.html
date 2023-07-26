@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+.container{
+    text-align: center;
+}
+.animation-character{
+    background-image: linear-gradient(-225deg,#231557 0%,#44107a 29%,#ff1361 67%,#fff800 100%);
+     background-size: auto auto;
+    background-clip:border-box;
+    background-size: 300% auto;
+    color:#fff;
+    -webkit-background-clip: text ;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3s alternate-reverse infinite;
+    display: inline-block;
+    font-size: 40px;
+}
+@keyframes textclip{
+    to{
+        background-position: 1100px center;
+    }
+}
+.clear{  
+width: 81px;  
+border: 3px solid gray;  
+    border-radius: 3px;  
+    padding: 20px;  
+    background-color: rgb(245, 126, 171);  
+}   
+.formstyle  
+{  
+width: 300px;  
+height: 550px;  
+margin: auto;  
+border: 3px solid skyblue;  
+border-radius: 5px;  
+padding: 20px;  
+}    
+input  
+{  
+    width: 20px;  
+    background-color: rgb(224, 241, 233);  
+    color: black;  
+    border: 3px solid gray;  
+    border-radius: 5px;  
+    padding: 26px;  
+    margin: 5px;  
+    font-size: 15px; 
+}    
+#calc{  
+    width: 250px;  
+    border: 5px solid black;  
+    border-radius: 3px;  
+    padding: 20px;  
+    margin: auto;  
+}
+.bgcolor{
+   background-color:rgb(115, 175, 152);
+   text-align: center;
+}  
+.bgcolor:hover{
+    background-color: #fff800;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+           <div class="col-md-12 text-center">
+            <h2 class="animation-character"> SIMPLE CALCULATOR</h2>
+           </div>
+        </div>
+    </div>    
+<div class= "formstyle">  
+<form name = "form1">  
+  <input id = "calc" type ="text" name = "answer"> <br> <br>   
+   <input type = "button" value = "AC" onclick = "form1.answer.value = ' ' " class= "clear"  >
+   <input type = "button" value = "Delete" onclick = "form1.answer.value = form1.answer.value.substring(0,form1.answer.value.length-1)" class= "clear" >
+   <input type = "button" value = "%" onclick = "form1.answer.value =(form1.answer.value.substring(0,form1.answer.value.length)/100)"class= "clear">  
+   <br>   
+  <input type = "button" value = "7" onclick = "form1.answer.value += '7' ">  
+  <input type = "button" value = "8" onclick = "form1.answer.value += '8' ">  
+  <input type = "button" value = "9" onclick = "form1.answer.value += '9' ">  
+  <input type = "button" value = "x" onclick = "form1.answer.value += '*' " class="bgcolor">  
+  <br><br>   
+  <input type = "button" value = "4" onclick = "form1.answer.value += '4' ">  
+  <input type = "button" value = "5" onclick = "form1.answer.value += '5' ">  
+  <input type = "button" value = "6" onclick = "form1.answer.value += '6' ">  
+  <input type = "button" value = "-" onclick = "form1.answer.value += '-' " class="bgcolor">  
+  <br><br>  
+  <input type = "button" value = "1" onclick = "form1.answer.value += '1' ">  
+  <input type = "button" value = "2" onclick = "form1.answer.value += '2' ">  
+  <input type = "button" value = "3" onclick = "form1.answer.value += '3' ">  
+  <input type = "button" value = "+" onclick = "form1.answer.value += '+' "class="bgcolor"> 
+  <br><br>  
+  <input type = "button" value = "÷" onclick = "form1.answer.value += '/' " class="bgcolor">  
+  <input type = "button" value = "0" onclick = "form1.answer.value += '0' ">  
+  <input type = "button" value = "." onclick = "form1.answer.value += '.' " class="bgcolor">  
+  <input type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) " class="bgcolor">     
+</form>  
+</div>  
+</body>
+</html>
